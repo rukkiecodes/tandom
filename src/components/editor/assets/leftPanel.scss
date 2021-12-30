@@ -1,0 +1,79 @@
+.leftPanel {
+  height: 93.7vh;
+  width: 250px;
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  top: 44px;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+
+  .layersContainer {
+    width: 100%;
+    height: 25%;
+    background-color: #fff;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #DDDDDD;
+      border-radius: 10px;
+    }
+  }
+
+  .blocksContainer {
+    width: 100%;
+    height: 75%;
+    overflow-y: hidden;
+
+    .blocksNav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .blocks {
+      overflow-y: scroll !important;
+      height: 90%;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #fff;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #DDDDDD;
+        border-radius: 10px;
+      }
+
+      #blocks {
+        width: 100%;
+      }
+
+      .gjs-blocks-c {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .gjs-block {
+        width: 45%;
+        height: auto;
+        min-height: 100px;
+      }
+    }
+  }
+}

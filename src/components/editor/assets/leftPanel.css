@@ -1,0 +1,94 @@
+.leftPanel {
+  height: 93.7vh;
+  width: 250px;
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  top: 44px;
+  left: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.leftPanel .layersContainer {
+  width: 100%;
+  height: 25%;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.leftPanel .layersContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.leftPanel .layersContainer::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.leftPanel .layersContainer::-webkit-scrollbar-thumb {
+  background: #DDDDDD;
+  border-radius: 10px;
+}
+
+.leftPanel .blocksContainer {
+  width: 100%;
+  height: 75%;
+  overflow-y: hidden;
+}
+
+.leftPanel .blocksContainer .blocksNav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leftPanel .blocksContainer .blocks {
+  overflow-y: scroll !important;
+  height: 90%;
+}
+
+.leftPanel .blocksContainer .blocks::-webkit-scrollbar {
+  width: 6px;
+}
+
+.leftPanel .blocksContainer .blocks::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.leftPanel .blocksContainer .blocks::-webkit-scrollbar-thumb {
+  background: #DDDDDD;
+  border-radius: 10px;
+}
+
+.leftPanel .blocksContainer .blocks #blocks {
+  width: 100%;
+}
+
+.leftPanel .blocksContainer .blocks .gjs-blocks-c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.leftPanel .blocksContainer .blocks .gjs-block {
+  width: 45%;
+  height: auto;
+  min-height: 100px;
+}
+/*# sourceMappingURL=leftPanel.css.map */

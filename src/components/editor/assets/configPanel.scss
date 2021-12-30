@@ -1,0 +1,21 @@
+.configPanel {
+  height: 93.7vh;
+  width: 250px;
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  top: 44px;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+
+  .traitsContainer {
+    width: 100%;
+    background-color: red;
+    overflow-y: auto;
+  }
+
+  .class-container {
+    width: 100%;
+  }
+}
