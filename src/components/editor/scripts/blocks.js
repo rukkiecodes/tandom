@@ -204,13 +204,132 @@ export default (editor, opt) => {
     `,
   })
 
-  bm.add("gridRow", {
-    label: "Grid Row",
+  bm.add("text-basic", {
     category: "Basic",
-    media: `<img src="${require("../images/grid_row.svg")}"/>`,
-    attributes: { class: "bootstrapBlocks" },
+    label: "Text section",
+    attributes: { class: "gjs-fonts gjs-f-h1p" },
+    content: `<section class="bdg-sect">
+      <h1 class="heading">Insert title here</h1>
+      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+      </section>`,
+  })
+
+  bm.add("divider", {
+    label: "Divider",
+    category: "Basic",
+    content: `<table style="width: 100%; margin-top: 10px; margin-bottom: 10px;">
+        <tr>
+          <td class="divider"></td>
+        </tr>
+      </table>
+      <style>
+      .divider {
+        background-color: rgba(0, 0, 0, 0.1);
+        height: 10px;
+        width: 100%;
+      }
+      </style>`,
+    attributes: { class: "gjs-fonts gjs-f-divider" },
+  })
+
+  let gridItem = `<table class="grid-item-card">
+        <tr>
+          <td class="grid-item-card-cell">
+            <img class="grid-item-image" src="http://placehold.it/250x150/78c5d6/fff/" alt="Image"/>
+            <table class="grid-item-card-body">
+              <tr>
+                <td class="grid-item-card-content">
+                  <h1 class="card-title">Title here</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>`
+
+  bm.add("grid-items", {
+    label: "Grid item",
+    category: "Basic",
+    content: `<table class="grid-item-row">
+        <tr>
+          <td class="grid-item-cell2-l">${gridItem}</td>
+          <td class="grid-item-cell2-r">${gridItem}</td>
+        </tr>
+      </table>`,
+    attributes: { class: "fa fa-th" },
+  })
+
+  let listItem = `<table class="list-item">
+        <tr>
+          <td class="list-item-cell">
+            <table class="list-item-content">
+              <tr class="list-item-row">
+                <td class="list-cell-left">
+                  <img class="list-item-image" src="http://placehold.it/150x150/78c5d6/fff/" alt="Image"/>
+                </td>
+                <td class="list-cell-right">
+                  <h1 class="card-title">Title here</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>`
+
+  bm.add("list-items", {
+    label: "List item",
+    category: "Basic",
+    content: listItem + listItem,
+    attributes: { class: "fa fa-th-list" },
+  })
+
+  bm.add("list", {
+    category: "Basic",
+    label: "List",
+    attributes: { title: "List", class: "fa fa-bars" },
     content: `
-      <div class="row"><div class="col-sm-4"><h3>col-sm-4</h3></div><div class="col-sm-4 col-5"><h3>col-sm-4</h3></div><div class="col-sm-4"><h3>col-sm-4</h3></div></div>
+    <ul class="list-group">
+      <li class="list-group-item">List One</li>
+      <li class="list-group-item">List Two</li>
+      <li class="list-group-item">List Three</li>
+      <li class="list-group-item">List Four</li>
+    </ul>
+    `,
+  })
+
+  bm.add("list2", {
+    category: "Basic",
+    label: "List Two",
+    attributes: { title: "List two", class: "fa fa-bars" },
+    content: `
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small>3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+    </div>
     `,
   })
 
@@ -405,7 +524,11 @@ export default (editor, opt) => {
     media: `<img src="${require("../images/paragraph.svg")}"/>`,
     attributes: { class: "bootstrapBlocks" },
     content: `
-      <p>Lorem ipsum</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint earum
+        placeat magni ullam quis voluptate laudantium deleniti, sed et totam saepe
+        praesentium quisquam eius, dolorem ad nostrum libero. Voluptatibus, vitae.
+      </p>
     `,
   })
 
@@ -449,6 +572,46 @@ export default (editor, opt) => {
     attributes: { class: "bootstrapBlocks" },
     content: `
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" data-component-paypal=""><input type="hidden" name="business" value="givanz@yahoo.com"><input type="hidden" name="cmd" value="_donations"><input type="hidden" name="item_name" value="VvvebJs"><input type="hidden" name="item_number" value="Support"><input type="hidden" name="currency_code" value="USD"><input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate"><img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"></form>
+    `,
+  })
+
+  bm.add("navbar", {
+    category: "Extra",
+    media: navbarBlock,
+    label: "Navbar",
+    attributes: { title: "Navbar" },
+    content: `
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     `,
   })
 
@@ -510,7 +673,9 @@ export default (editor, opt) => {
                   </div>
                   <p class="post-content mt-3">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio delectus assumenda, voluptatibus rem labore nesciunt magnam ab provident odio ipsam!
-      
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint earum
+                    placeat magni ullam quis voluptate laudantium deleniti, sed et totam saepe
+                    praesentium quisquam eius, dolorem ad nostrum libero. Voluptatibus, vitae.
                   </p>
                   <button class="btn btn-outline-primary">Continue Reading <span class="ms-2 fa fa-arrow-right"></span></button>
                 </div>
@@ -533,7 +698,6 @@ export default (editor, opt) => {
                   </div>
                   <p class="post-content mt-3">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio delectus assumenda, voluptatibus rem labore nesciunt magnam ab provident odio ipsam!
-      
                   </p>
                   <button class="btn btn-outline-primary">Continue Reading <span class="ms-2 fa fa-arrow-right"></span></button>
                 </div>
@@ -556,7 +720,6 @@ export default (editor, opt) => {
                   </div>
                   <p class="post-content mt-3">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio delectus assumenda, voluptatibus rem labore nesciunt magnam ab provident odio ipsam!
-      
                   </p>
                   <button class="btn btn-outline-primary">Continue Reading <span class="ms-2 fa fa-arrow-right"></span></button>
                 </div>
@@ -798,7 +961,11 @@ export default (editor, opt) => {
                 <div class="col-md-8">
                   <h4>Peter J. Lamy</h4>
                   <p class="my-2"><small>Software Developer</small></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet.</p>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint earum
+                    placeat magni ullam quis voluptate laudantium deleniti, sed et totam saepe
+                    praesentium quisquam eius, dolorem ad nostrum libero. Voluptatibus, vitae.
+                  </p>
                   <div class="social-icons">
                     <a href="#" class="me-2"><span class="fa fa-facebook"></span></a><a href="#" class="me-2"><span
                         class="fa fa-instagram"></span></a><a href="#" class="me-2"><span
@@ -817,7 +984,11 @@ export default (editor, opt) => {
                 <div class="col-md-8">
                   <h4>June D. Smith</h4>
                   <p class="my-2"><small>Product Manager</small></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet.</p>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint earum
+                    placeat magni ullam quis voluptate laudantium deleniti, sed et totam saepe
+                    praesentium quisquam eius, dolorem ad nostrum libero. Voluptatibus, vitae.
+                  </p>
                   <div class="social-icons">
                     <a href="#" class="me-2"><span class="fa fa-facebook"></span></a><a href="#" class="me-2"><span
                         class="fa fa-instagram"></span></a><a href="#" class="me-2"><span
@@ -836,7 +1007,11 @@ export default (editor, opt) => {
                 <div class="col-md-8">
                   <h4>Dianna C. Avila</h4>
                   <p class="my-2"><small>Graphic Designer</small></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet.</p>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint earum
+                    placeat magni ullam quis voluptate laudantium deleniti, sed et totam saepe
+                    praesentium quisquam eius, dolorem ad nostrum libero. Voluptatibus, vitae.
+                  </p>
                   <div class="social-icons">
                     <a href="#" class="me-2"><span class="fa fa-facebook"></span></a><a href="#" class="me-2"><span
                         class="fa fa-instagram"></span></a><a href="#" class="me-2"><span
@@ -855,7 +1030,11 @@ export default (editor, opt) => {
                 <div class="col-md-8">
                   <h4>Robert C. Young</h4>
                   <p class="my-2"><small>Web Designer</small></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing tristique hendrerit laoreet.</p>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint earum
+                    placeat magni ullam quis voluptate laudantium deleniti, sed et totam saepe
+                    praesentium quisquam eius, dolorem ad nostrum libero. Voluptatibus, vitae.
+                  </p>
                   <div class="social-icons">
                     <a href="#" class="me-2"><span class="fa fa-facebook"></span></a><a href="#" class="me-2"><span
                         class="fa fa-instagram"></span></a><a href="#" class="me-2"><span
@@ -897,15 +1076,22 @@ export default (editor, opt) => {
   })
 
   bm.add("input", {
-    category: "Form",
-    media: inputBlock,
     label: "Input",
-    attributes: { title: "Input" },
+    category: "Basic",
+    media: `<img src="${require("../images/text_input.svg")}"/>`,
+    attributes: { class: "bootstrapBlocks" },
     content: `
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Label</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="placeholder">
-    </div>
+      <div class="mb-3"><label>Text</label><input type="text" class="form-control"></div>
+    `,
+  })
+
+  bm.add("formInput", {
+    label: "Input",
+    category: "Form",
+    media: `<img src="${require("../images/text_input.svg")}"/>`,
+    attributes: { class: "bootstrapBlocks" },
+    content: `
+    <div class="mb-3"><label>Text</label><input type="text" class="form-control"></div>
     `,
   })
 
@@ -937,11 +1123,11 @@ export default (editor, opt) => {
     `,
   })
 
-  bm.add("button", {
-    category: "Form",
-    media: buttonBlock,
+  bm.add("formButton", {
     label: "Button",
-    attributes: { title: "Button" },
+    category: "Form",
+    media: `<img src="${require("../images/button.svg")}"/>`,
+    attributes: { class: "bootstrapBlocks" },
     content: `
       <button type="button" class="btn btn-primary">Primary</button>
     `,

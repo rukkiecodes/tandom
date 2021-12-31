@@ -17,6 +17,7 @@
 
     &::-webkit-scrollbar {
       width: 6px;
+      height: 6px
     }
 
     &::-webkit-scrollbar-track {
@@ -37,7 +38,7 @@
     .blocksNav {
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
     }
 
@@ -62,6 +63,10 @@
         width: 100%;
       }
 
+      .gjs-one-bg {
+        background-color: #fff;
+      }
+
       .gjs-blocks-c {
         display: flex;
         justify-content: space-between;
@@ -73,6 +78,46 @@
         width: 45%;
         height: auto;
         min-height: 100px;
+        color: rgba(0, 0, 0, 0.8);
+        box-shadow: none;
+        border: none;
+
+        &:hover {
+          border-radius: 10px;
+          background: #ffffff;
+          box-shadow: 7px 7px 14px #d9d9d9,
+            -7px -7px 14px #ffffff;
+        }
+      }
+
+      .gjs-category-title,
+      .gjs-layer-title,
+      .gjs-block-category .gjs-title,
+      .gjs-sm-sector .gjs-sm-title,
+      .gjs-clm-tags .gjs-sm-title {
+        background: none;
+        padding: 9px 10px 9px 20px;
+        position: relative;
+        cursor: pointer;
+        color: #777;
+        border: none;
+        transition: .1s all ease-in-out;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-align: left;
+        text-transform: uppercase;
+        padding-right: 50px;
+        margin: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        &:hover {
+          background: #F5F5F5;
+          color: #3D3DF4;
+        }
       }
     }
   }

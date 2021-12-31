@@ -4,18 +4,7 @@
       <template #left>
         <Logo />
       </template>
-      <vs-navbar-item :active="active == 'guide'" id="guide">
-        Guide
-      </vs-navbar-item>
-      <vs-navbar-item :active="active == 'docs'" id="docs">
-        Documents
-      </vs-navbar-item>
-      <vs-navbar-item :active="active == 'components'" id="components">
-        Components
-      </vs-navbar-item>
-      <vs-navbar-item :active="active == 'license'" id="license">
-        license
-      </vs-navbar-item>
+      <div class="panel__basic-actions"></div>
       <template #right>
         <vs-button flat>Login</vs-button>
         <vs-button>Get Started</vs-button>
@@ -32,7 +21,7 @@ export default {
   }),
 
   components: {
-    Logo
-  }
+    Logo,
+  },
 }
 </script>

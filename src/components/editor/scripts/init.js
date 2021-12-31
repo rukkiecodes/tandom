@@ -19,6 +19,9 @@ import grapesjscustomcode from "./blocks/costomCode"
 import grapesjsTabs from "./blocks/tabs"
 import grapesjstooltip from "./blocks/tooltip"
 
+// IMPORT PLACEHOLDER
+import placeholder from "./placeholder"
+
 export default () => {
   const editor = grapesjs.init({
     container: "#editor",
@@ -62,6 +65,8 @@ export default () => {
       ],
     },
   })
+
+  editor.addComponents(placeholder)
 
   blocks(editor)
   config(editor)

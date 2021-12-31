@@ -1,3 +1,4 @@
+// @ts-nocheck
 export default function (editor, opt = {}) {
   const c = opt;
   let bm = editor.BlockManager;

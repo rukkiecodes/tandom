@@ -20,6 +20,7 @@
 
 .leftPanel .layersContainer::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 .leftPanel .layersContainer::-webkit-scrollbar-track {
@@ -42,9 +43,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -72,6 +72,10 @@
   width: 100%;
 }
 
+.leftPanel .blocksContainer .blocks .gjs-one-bg {
+  background-color: #fff;
+}
+
 .leftPanel .blocksContainer .blocks .gjs-blocks-c {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,5 +94,51 @@
   width: 45%;
   height: auto;
   min-height: 100px;
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.leftPanel .blocksContainer .blocks .gjs-block:hover {
+  border-radius: 10px;
+  background: #ffffff;
+  -webkit-box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
+          box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
+}
+
+.leftPanel .blocksContainer .blocks .gjs-category-title,
+.leftPanel .blocksContainer .blocks .gjs-layer-title,
+.leftPanel .blocksContainer .blocks .gjs-block-category .gjs-title,
+.leftPanel .blocksContainer .blocks .gjs-sm-sector .gjs-sm-title,
+.leftPanel .blocksContainer .blocks .gjs-clm-tags .gjs-sm-title {
+  background: none;
+  padding: 9px 10px 9px 20px;
+  position: relative;
+  cursor: pointer;
+  color: #777;
+  border: none;
+  -webkit-transition: .1s all ease-in-out;
+  transition: .1s all ease-in-out;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  padding-right: 50px;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.leftPanel .blocksContainer .blocks .gjs-category-title:hover,
+.leftPanel .blocksContainer .blocks .gjs-layer-title:hover,
+.leftPanel .blocksContainer .blocks .gjs-block-category .gjs-title:hover,
+.leftPanel .blocksContainer .blocks .gjs-sm-sector .gjs-sm-title:hover,
+.leftPanel .blocksContainer .blocks .gjs-clm-tags .gjs-sm-title:hover {
+  background: #F5F5F5;
+  color: #3D3DF4;
 }
 /*# sourceMappingURL=leftPanel.css.map */
