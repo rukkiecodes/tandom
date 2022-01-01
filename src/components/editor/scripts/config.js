@@ -158,4 +158,14 @@ export default (editor) => {
       inputType.dispatchEvent(new CustomEvent("change"))
     },
   })
+
+  editor.on("load", () => {
+    const blocksEl = document.querySelectorAll(".gjs-block-category")
+    document.querySelector("#rowBlocks").appendChild(blocksEl[4])
+    document.querySelector("#componentBlocks").appendChild(blocksEl[5])
+    document.querySelector("#componentBlocks").appendChild(blocksEl[6])
+    document.querySelector("#componentBlocks").appendChild(blocksEl[7])
+    document.querySelector("#componentBlocks").appendChild(blocksEl[8])
+    document.querySelector("#componentBlocks").appendChild(blocksEl[9])
+  })
 }

@@ -11,7 +11,7 @@
 
   .layersContainer {
     width: 100%;
-    height: 25%;
+    height: 100%;
     background-color: #fff;
     overflow-y: auto;
 
@@ -32,8 +32,14 @@
 
   .blocksContainer {
     width: 100%;
-    height: 75%;
+    height: auto;
     overflow-y: hidden;
+    transition: .3s all ease-in-out;
+    border-top: 2px solid transparent;
+
+    &:hover {
+      border-top: 2px solid #195BFF;
+    }
 
     .blocksNav {
       width: 100%;
@@ -90,6 +96,16 @@
         }
       }
 
+      .layerBlocks {
+        width: 100% !important;
+        min-height: 62px !important;
+      }
+
+      .componentsBlocks {
+        width: 100% !important;
+        min-height: 62px !important;
+      }
+
       .gjs-category-title,
       .gjs-layer-title,
       .gjs-block-category .gjs-title,
@@ -118,6 +134,13 @@
           background: #F5F5F5;
           color: #3D3DF4;
         }
+      }
+
+      .gjs-category-open,
+      .gjs-block-category.gjs-open,
+      .gjs-sm-sector.gjs-sm-open,
+      .gjs-sm-open.gjs-clm-tags {
+        border-bottom: none;
       }
     }
   }

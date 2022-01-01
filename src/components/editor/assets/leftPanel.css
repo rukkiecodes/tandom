@@ -13,7 +13,7 @@
 
 .leftPanel .layersContainer {
   width: 100%;
-  height: 25%;
+  height: 100%;
   background-color: #fff;
   overflow-y: auto;
 }
@@ -34,8 +34,15 @@
 
 .leftPanel .blocksContainer {
   width: 100%;
-  height: 75%;
+  height: auto;
   overflow-y: hidden;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+  border-top: 2px solid transparent;
+}
+
+.leftPanel .blocksContainer:hover {
+  border-top: 2px solid #195BFF;
 }
 
 .leftPanel .blocksContainer .blocksNav {
@@ -107,6 +114,16 @@
           box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
 }
 
+.leftPanel .blocksContainer .blocks .layerBlocks {
+  width: 100% !important;
+  min-height: 62px !important;
+}
+
+.leftPanel .blocksContainer .blocks .componentsBlocks {
+  width: 100% !important;
+  min-height: 62px !important;
+}
+
 .leftPanel .blocksContainer .blocks .gjs-category-title,
 .leftPanel .blocksContainer .blocks .gjs-layer-title,
 .leftPanel .blocksContainer .blocks .gjs-block-category .gjs-title,
@@ -140,5 +157,12 @@
 .leftPanel .blocksContainer .blocks .gjs-clm-tags .gjs-sm-title:hover {
   background: #F5F5F5;
   color: #3D3DF4;
+}
+
+.leftPanel .blocksContainer .blocks .gjs-category-open,
+.leftPanel .blocksContainer .blocks .gjs-block-category.gjs-open,
+.leftPanel .blocksContainer .blocks .gjs-sm-sector.gjs-sm-open,
+.leftPanel .blocksContainer .blocks .gjs-sm-open.gjs-clm-tags {
+  border-bottom: none;
 }
 /*# sourceMappingURL=leftPanel.css.map */
