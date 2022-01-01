@@ -1,6 +1,6 @@
 <template>
   <vs-sidebar open :square="true" class="leftPanel">
-    <vue-resizable :minHeight="30" :maxHeight="200" :fitParent="true" :active="['b']">
+    <vue-resizable :minHeight="31" :maxHeight="200" :fitParent="true" :active="['b']">
       <div class="layersContainer">
         <div class="layers-container"></div>
       </div>

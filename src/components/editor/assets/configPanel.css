@@ -13,11 +13,214 @@
 
 .configPanel .traitsContainer {
   width: 100%;
-  background-color: red;
   overflow-y: auto;
+}
+
+.configPanel .traitsContainer * {
+  color: #737373;
+}
+
+.configPanel .traitsContainer .gjs-one-bg {
+  background-color: #fff;
+}
+
+.configPanel .traitsContainer .gjs-label {
+  color: #aaa;
+  font-size: 10px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0 5px;
+  margin: 10px 0 5px;
+}
+
+.configPanel .traitsContainer .gjs-field {
+  background-color: transparent;
+}
+
+.configPanel .traitsContainer .gjs-field input,
+.configPanel .traitsContainer .gjs-field select {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #F4F7F8;
+  color: #2c3e50;
+  padding: 8px 13px 8px 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.configPanel .traitsContainer .gjs-field input option,
+.configPanel .traitsContainer .gjs-field select option {
+  font-size: .8rem;
+  background-color: #ffffff;
+}
+
+.configPanel .traitsContainer .gjs-field input::-webkit-input-placeholder,
+.configPanel .traitsContainer .gjs-field select::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .traitsContainer .gjs-field input:-ms-input-placeholder,
+.configPanel .traitsContainer .gjs-field select:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .traitsContainer .gjs-field input::-ms-input-placeholder,
+.configPanel .traitsContainer .gjs-field select::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .traitsContainer .gjs-field input::placeholder,
+.configPanel .traitsContainer .gjs-field select::placeholder {
+  opacity: .4;
+}
+
+.configPanel .traitsContainer .gjs-field input:focus,
+.configPanel .traitsContainer .gjs-field select:focus {
+  padding-left: 15px;
+}
+
+.configPanel .traitsContainer .gjs-field input:focus::-webkit-input-placeholder,
+.configPanel .traitsContainer .gjs-field select:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .traitsContainer .gjs-field input:focus:-ms-input-placeholder,
+.configPanel .traitsContainer .gjs-field select:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .traitsContainer .gjs-field input:focus::-ms-input-placeholder,
+.configPanel .traitsContainer .gjs-field select:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .traitsContainer .gjs-field input:focus::placeholder,
+.configPanel .traitsContainer .gjs-field select:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .traitsContainer .gjs-field .gjs-d-s-arrow {
+  border-top: 4 px solid #737373 !important;
 }
 
 .configPanel .class-container {
   width: 100%;
+}
+
+.configPanel .class-container .gjs-one-bg {
+  background-color: #fff;
+}
+
+.configPanel .class-container * {
+  color: #737373;
+}
+
+.configPanel .class-container #gjs-clm-label {
+  color: #aaa;
+  font-size: 10px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0 5px;
+  margin: 10px 0 5px;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input {
+  color: #2c3e50;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 8px 13px 8px 10px;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input::placeholder {
+  opacity: .4;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input:focus {
+  padding-left: 15px;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field input:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field #gjs-clm-add-tag {
+  background: #195BFF;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.configPanel .class-container .gjs-clm-tags #gjs-clm-tags-field #gjs-clm-add-tag svg {
+  fill: #fff;
+}
+
+.configPanel .class-container .gjs-clm-tags .gjs-field {
+  background-color: #F4F7F8;
+  border-radius: 12px;
+}
+
+.configPanel .class-container .gjs-clm-tags .gjs-field #gjs-input-holder select {
+  cursor: pointer;
+}
+
+.configPanel .class-container .gjs-clm-tags .gjs-field #gjs-input-holder select option {
+  font-size: .8rem;
+  background-color: #ffffff;
+}
+
+.configPanel .class-container .gjs-clm-tags .gjs-field:nth-child(1) {
+  padding: 3px 5px;
+  border-radius: 7px;
+}
+
+.configPanel .class-container .gjs-clm-tags .gjs-field:nth-child(1) .gjs-d-s-arrow {
+  border-top: 4px solid #737373;
+}
+
+.configPanel .class-container .gjs-three-bg {
+  background-color: #DCE6FF;
+}
+
+.configPanel .class-container .gjs-three-bg * {
+  color: #737373;
+  opacity: 1;
+}
+
+.configPanel .class-container .gjs-clm-label-sel {
+  font-weight: 600;
+}
+
+.configPanel .class-container .gjs-clm-sel-id {
+  color: #195BFF;
+  opacity: 1;
 }
 /*# sourceMappingURL=configPanel.css.map */

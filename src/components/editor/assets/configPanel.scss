@@ -11,11 +11,161 @@
 
   .traitsContainer {
     width: 100%;
-    background-color: red;
     overflow-y: auto;
+
+    * {
+      color: #737373
+    }
+
+    .gjs-one-bg {
+      background-color: #fff;
+    }
+
+    .gjs-label {
+      color: #aaa;
+      font-size: 10px;
+      line-height: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 0 5px;
+      margin: 10px 0 5px;
+    }
+
+    .gjs-field {
+      background-color: transparent;
+
+
+      input,
+      select {
+        border: 1px solid transparent;
+        border-radius: 12px;
+        background-color: #F4F7F8;
+        color: rgba(44, 62, 80, 1);
+        padding: 8px 13px 8px 10px;
+        transition: all .25s ease;
+        font-size: .8rem;
+        font-weight: 600;
+
+        option {
+          font-size: .8rem;
+          background-color: #ffffff;
+        }
+
+        &::placeholder {
+          opacity: .4;
+        }
+
+        &:focus {
+          padding-left: 15px;
+
+          &::placeholder {
+            opacity: 1;
+          }
+        }
+      }
+
+      .gjs-d-s-arrow {
+        border-top: 4 px solid #737373 !important;
+      }
+    }
   }
 
   .class-container {
     width: 100%;
+
+    .gjs-one-bg {
+      background-color: #fff;
+    }
+
+    * {
+      color: #737373
+    }
+
+    #gjs-clm-label {
+      color: #aaa;
+      font-size: 10px;
+      line-height: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 0 5px;
+      margin: 10px 0 5px;
+    }
+
+    .gjs-clm-tags {
+      #gjs-clm-tags-field {
+        input {
+          color: rgba(44, 62, 80, 1);
+          transition: all .25s ease;
+          font-size: .8rem;
+          font-weight: 600;
+          padding: 8px 13px 8px 10px;
+
+          &::placeholder {
+            opacity: .4;
+          }
+
+          &:focus {
+            padding-left: 15px;
+
+            &::placeholder {
+              opacity: 1;
+            }
+          }
+        }
+
+        #gjs-clm-add-tag {
+          background: #195BFF;
+          border: 1px solid transparent;
+          border-radius: 5px;
+
+          svg {
+            fill: #fff;
+          }
+        }
+      }
+
+      .gjs-field {
+        background-color: #F4F7F8;
+        border-radius: 12px;
+
+        #gjs-input-holder {
+          select {
+            cursor: pointer;
+
+            option {
+              font-size: .8rem;
+              background-color: #ffffff;
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          padding: 3px 5px;
+          border-radius: 7px;
+
+          .gjs-d-s-arrow {
+            border-top: 4px solid #737373;
+          }
+        }
+      }
+    }
+
+    .gjs-three-bg {
+      background-color: #DCE6FF;
+
+      * {
+        color: #737373;
+        opacity: 1;
+      }
+    }
+
+    .gjs-clm-label-sel {
+      font-weight: 600;
+    }
+
+    .gjs-clm-sel-id {
+      color: #195BFF;
+      opacity: 1;
+    }
   }
 }

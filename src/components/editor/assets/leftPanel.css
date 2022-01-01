@@ -18,9 +18,26 @@
   overflow-y: auto;
 }
 
+.leftPanel .layersContainer * {
+  color: #737373;
+  border-color: transparent;
+}
+
+.leftPanel .layersContainer .gjs-one-bg {
+  background-color: #fff;
+}
+
+.leftPanel .layersContainer .gjs-category-title,
+.leftPanel .layersContainer .gjs-layer-title,
+.leftPanel .layersContainer .gjs-block-category .gjs-title,
+.leftPanel .layersContainer .gjs-sm-sector .gjs-sm-title,
+.leftPanel .layersContainer .gjs-clm-tags .gjs-sm-title {
+  background-color: transparent;
+}
+
 .leftPanel .layersContainer::-webkit-scrollbar {
   width: 6px;
-  height: 6px;
+  height: 0;
 }
 
 .leftPanel .layersContainer::-webkit-scrollbar-track {

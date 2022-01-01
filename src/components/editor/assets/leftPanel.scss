@@ -15,9 +15,26 @@
     background-color: #fff;
     overflow-y: auto;
 
+    * {
+      color: #737373;
+      border-color: transparent;
+    }
+
+    .gjs-one-bg {
+      background-color: #fff;
+    }
+
+    .gjs-category-title,
+    .gjs-layer-title,
+    .gjs-block-category .gjs-title,
+    .gjs-sm-sector .gjs-sm-title,
+    .gjs-clm-tags .gjs-sm-title {
+      background-color: transparent;
+    }
+
     &::-webkit-scrollbar {
       width: 6px;
-      height: 6px
+      height: 0
     }
 
     &::-webkit-scrollbar-track {
