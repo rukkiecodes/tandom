@@ -21,6 +21,7 @@
 .leftPanel .layersContainer * {
   color: #737373;
   border-color: transparent;
+  background-color: #fff;
 }
 
 .leftPanel .layersContainer .gjs-one-bg {

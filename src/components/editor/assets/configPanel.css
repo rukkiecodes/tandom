@@ -544,6 +544,674 @@
   height: 100%;
 }
 
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-sm-icon {
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #aaa;
+  font-size: 10px;
+  line-height: 25px;
+  padding: 0 5px;
+  margin: 10px 0 5px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-sm-clear {
+  color: #737373;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-border-radius .gjs-fields .gjs-sm-field,
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-border .gjs-fields .gjs-sm-field {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-opacity .gjs-fields .gjs-field {
+  background-color: transparent;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-opacity .gjs-fields .gjs-field input[type="range"] {
+  width: 100%;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-opacity .gjs-fields .gjs-field input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-opacity .gjs-fields .gjs-field input[type=range]::-webkit-slider-runnable-track {
+  height: .35em;
+  background: #F4F7F8;
+  border: none;
+  border-radius: 3px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-opacity .gjs-fields .gjs-field input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  border: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background: #195BFF;
+  margin-top: -4px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-opacity .gjs-fields .gjs-field input[type=range]:focus {
+  outline: none;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background {
+  width: 100%;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field {
+  width: 100%;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #F4F7F8;
+  color: #2c3e50;
+  padding: 8px 13px 8px 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input::placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input:focus {
+  padding-left: 15px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-background .gjs-fields .gjs-field input:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field {
+  background-color: #F4F7F8;
+  border-radius: 8px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #F4F7F8;
+  color: #2c3e50;
+  padding: 8px 13px 8px 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select option {
+  font-size: .8rem;
+  background-color: #ffffff;
+  color: #737373;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus {
+  padding-left: 15px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #F4F7F8;
+  color: #2c3e50;
+  padding: 8px 13px 8px 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus {
+  padding-left: 15px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-colorp {
+  width: 34px;
+  border: none;
+  padding: 5px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-colorp .gjs-field-colorp-c {
+  border-radius: 6px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-colorp .gjs-field-colorp-c .gjs-checker-bg {
+  border-radius: 6px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-colorp .gjs-field-colorp-c .gjs-field-color-picker {
+  border-radius: 6px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-arrows .gjs-field-arrow-u {
+  border-bottom: 4px solid #737373;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-arrows .gjs-field-arrow-d {
+  border-top: 4px solid #737373;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-units {
+  top: 4px;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-units select {
+  color: #737373 !important;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-add {
+  background: #DCE6FF;
+  height: 25px;
+  margin-top: -12px;
+  border-radius: 8px;
+  color: #195BFF;
+  cursor: pointer;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-move {
+  color: #737373;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-label {
+  color: #000;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-close-layer {
+  background: #DCE6FF;
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  color: #195BFF;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.configPanel .styles-container #gjs-sm-decorations .gjs-sm-properties #gjs-sm-preview-box {
+  margin-right: 10px;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-sm-icon {
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #aaa;
+  font-size: 10px;
+  line-height: 25px;
+  padding: 0 5px;
+  margin: 10px 0 5px;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-sm-clear {
+  color: #737373;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field {
+  background-color: #F4F7F8;
+  border-radius: 8px;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #F4F7F8;
+  color: #2c3e50;
+  padding: 8px 13px 8px 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select option {
+  font-size: .8rem;
+  background-color: #ffffff;
+  color: #737373;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus {
+  padding-left: 15px;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #F4F7F8;
+  color: #2c3e50;
+  padding: 8px 13px 8px 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus {
+  padding-left: 15px;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-arrows .gjs-field-arrow-u {
+  border-bottom: 4px solid #737373;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-arrows .gjs-field-arrow-d {
+  border-top: 4px solid #737373;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-units {
+  top: 4px;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-units select {
+  color: #737373 !important;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties #gjs-sm-transition .gjs-fields #gjs-sm-add {
+  background: #DCE6FF;
+  height: 25px;
+  margin-top: -12px;
+  border-radius: 8px;
+  color: #195BFF;
+  cursor: pointer;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties #gjs-sm-transition .gjs-fields .gjs-sm-layers {
+  background-color: transparent;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties #gjs-sm-transition .gjs-fields .gjs-sm-layers * {
+  color: #737373;
+}
+
+.configPanel .styles-container #gjs-sm-extra .gjs-sm-properties #gjs-sm-transform .gjs-sm-composite {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-sm-icon {
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #aaa;
+  font-size: 10px;
+  line-height: 25px;
+  padding: 0 5px;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-sm-clear {
+  color: #737373;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field {
+  background-color: #F4F7F8;
+  border-radius: 8px;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #F4F7F8;
+  color: #2c3e50;
+  padding: 8px 13px 8px 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select option {
+  font-size: .8rem;
+  background-color: #ffffff;
+  color: #737373;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select::placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus {
+  padding-left: 15px;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field #gjs-sm-input-holder select:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #F4F7F8;
+  color: #2c3e50;
+  padding: 8px 13px 8px 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::-webkit-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::-ms-input-placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input::placeholder {
+  opacity: .4;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus {
+  padding-left: 15px;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-input-holder input:focus::placeholder {
+  opacity: 1;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-arrows .gjs-field-arrow-u {
+  border-bottom: 4px solid #737373;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-arrows .gjs-field-arrow-d {
+  border-top: 4px solid #737373;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-units {
+  top: 4px;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties .gjs-fields .gjs-field .gjs-field-units select {
+  color: #737373 !important;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex-direction .gjs-fields,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-justify-content .gjs-fields,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-items .gjs-fields,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-self .gjs-fields {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex-direction .gjs-fields .gjs-field,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-justify-content .gjs-fields .gjs-field,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-items .gjs-fields .gjs-field,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-self .gjs-fields .gjs-field {
+  line-height: 24px;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex-direction .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:first-child,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-justify-content .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:first-child,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-items .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:first-child,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-self .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex-direction .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:first-child .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-justify-content .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:first-child .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-items .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:first-child .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-self .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:first-child .gjs-radio-item-label {
+  border-radius: 8px 0 0 8px;
+  height: 100%;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex-direction .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-justify-content .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-items .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-self .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item .gjs-radio-item-label {
+  border-radius: 0;
+  height: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #aaa;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex-direction .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:last-child,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-justify-content .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:last-child,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-items .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:last-child,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-self .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex-direction .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:last-child .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-justify-content .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:last-child .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-items .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:last-child .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-self .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item:last-child .gjs-radio-item-label {
+  border-radius: 0 8px 8px 0;
+  height: 100%;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex-direction .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item input:checked + .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-justify-content .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item input:checked + .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-items .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item input:checked + .gjs-radio-item-label,
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-align-self .gjs-fields .gjs-field .gjs-radio-items .gjs-radio-item input:checked + .gjs-radio-item-label {
+  background: #DBDBFD;
+  color: #3D3DF4;
+  height: 100%;
+}
+
+.configPanel .styles-container #gjs-sm-flex .gjs-sm-properties #gjs-sm-flex .gjs-fields .gjs-sm-composite {
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .configPanel .styles-container .traitsContainer {
   width: 100%;
   min-height: auto;
