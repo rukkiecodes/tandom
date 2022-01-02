@@ -42,7 +42,7 @@
           id="device-mobile"
           icon
           shadow
-          :active="editor.activeButton == 4"
+          :active="editor.deviceButton == 1"
         >
           <i style="color: #000" class="las la-mobile icon"></i>
         </vs-button>
@@ -51,12 +51,12 @@
           id="device-desktop"
           icon
           shadow
-          :active="editor.activeButton == 4"
+          :active="editor.deviceButton == 2"
         >
           <i style="color: #000" class="las la-laptop icon"></i>
         </vs-button>
-        <vs-button flat>Login</vs-button>
-        <vs-button>Get Started</vs-button>
+        <!-- <vs-button flat>Login</vs-button>
+        <vs-button>Get Started</vs-button> -->
       </template>
     </vs-navbar>
   </header>
@@ -79,3 +79,7 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@import url(../assets/nav.css);
+</style>

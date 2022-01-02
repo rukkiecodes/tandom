@@ -8,26 +8,36 @@
         <div id="editor"></div>
       </div>
     </main>
+    <PageLoad v-if="pageLoad" />
   </div>
 </template>
 
 <script>
+// @ts-nocheck
 import Navbar from "./components/Navbar.vue"
 import LeftPanel from "./components/LeftPanel.vue"
 import ConfigPanel from "./components/ConfigPanel.vue"
+import PageLoad from "./components/PageLoad.vue"
 import init from "./scripts/init.js"
 export default {
-  data: () => ({}),
+  data: () => ({
+    pageLoad: true,
+  }),
 
   components: {
     Navbar,
     LeftPanel,
     ConfigPanel,
+    PageLoad,
   },
 
   mounted() {
     this.$nextTick(() => {
       init()
+
+      setTimeout(() => {
+        this.pageLoad = false
+      }, 5000)
     })
   },
 
