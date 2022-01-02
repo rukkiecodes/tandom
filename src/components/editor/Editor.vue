@@ -8,7 +8,7 @@
         <div id="editor"></div>
       </div>
     </main>
-    <PageLoad v-if="pageLoad" />
+    <PageLoad />
   </div>
 </template>
 
@@ -20,10 +20,6 @@ import ConfigPanel from "./components/ConfigPanel.vue"
 import PageLoad from "./components/PageLoad.vue"
 import init from "./scripts/init.js"
 export default {
-  data: () => ({
-    pageLoad: true,
-  }),
-
   components: {
     Navbar,
     LeftPanel,
@@ -34,14 +30,8 @@ export default {
   mounted() {
     this.$nextTick(() => {
       init()
-
-      setTimeout(() => {
-        this.pageLoad = false
-      }, 5000)
     })
   },
-
-  methods: {},
 }
 </script>
 

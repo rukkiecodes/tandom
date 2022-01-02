@@ -1,112 +1,34 @@
-<template>
-  <div class="pageLoader">
-    <div class="container">
-      <div class="ring"></div>
-      <div class="ring"></div>
-      <div class="ring"></div>
-      <p>Loading...</p>
-    </div>
-  </div>
-</template>
-
 <script>
-export default {}
+export default {
+  data: () => ({
+    percent: 0,
+  }),
+
+  mounted() {
+    this.$nextTick(() => {
+      this.openLoading()
+    })
+  },
+  methods: {
+    openLoading() {
+      const loading = this.$vs.loading({
+        percent: this.percent,
+        background: "#fff",
+        opacity: 1,
+        type: "border",
+        scale: 2,
+      })
+      const interval = setInterval(() => {
+        if (this.percent <= 100) {
+          loading.changePercent(`${this.percent++}%`)
+        }
+      }, 40)
+      setTimeout(() => {
+        loading.close()
+        clearInterval(interval)
+        this.percent = 0
+      }, 4800)
+    },
+  },
+}
 </script>
-
-<style scoped>
-.pageLoader {
-  width: 100vw;
-  height: 100vh;
-  background: #111111;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 10000 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* Line */
-.container .ring {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin: -30px;
-  border: 4px solid transparent;
-  border-radius: 50%;
-  border-top: 4px solid #1A5CFF;
-}
-/* Head of line */
-.container .ring::before{
-  content: '';
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  background: #1A5CFF;
-  box-shadow: 
-    0 0 0 5px #1A5CFF33,
-    0 0 0 10px #1A5CFF22,
-    0 0 0 20px #1A5CFF11,
-    0 0 40px #1A5CFF,
-    0 0 50px #1A5CFF;; 
-}
-/* Circle Position & Animation */
-.container .ring:nth-child(1){
-  animation: circle2 2s linear infinite;
-}
-.container .ring:nth-child(2){
-  animation: circle1 2s linear infinite;
-}
-.container .ring:nth-child(3){
-  position: absolute;
-  top: -66.66px;
-  animation: circle 2s linear infinite;
-}
-/* Loading Text */
-.container p{
-  overflow: hidden;
-  position: absolute;
-  color: #fff;
-  font-size: 32px;
-  font-family: consolas;
-  bottom: -120px;
-  letter-spacing: 4px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-/* Animation */
-@keyframes circle{
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-}
-@keyframes circle1{
-  0%{
-    transform: rotate(120deg);
-  }
-  100%{
-    transform: rotate(480deg);
-  }
-}
-@keyframes circle2{
-  0%{
-    transform: rotate(240deg);
-  }
-  100%{
-    transform: rotate(600deg);
-  }
-}
-</style>
