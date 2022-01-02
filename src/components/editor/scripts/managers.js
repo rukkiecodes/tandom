@@ -132,7 +132,7 @@ const styleManager = {
     },
     {
       name: "Typography",
-      open: false,
+      open: true,
       buildProps: [
         "font-family",
         "font-size",
@@ -200,7 +200,7 @@ const styleManager = {
     },
     {
       name: "Decorations",
-      open: false,
+      open: true,
       buildProps: [
         "opacity",
         "border-radius",
@@ -246,7 +246,7 @@ const styleManager = {
     },
     {
       name: "Extra",
-      open: false,
+      open: true,
       buildProps: ["transition", "perspective", "transform"],
       properties: [
         {
@@ -272,7 +272,7 @@ const styleManager = {
     },
     {
       name: "Flex",
-      open: false,
+      open: true,
       properties: [
         {
           name: "Flex Container",
