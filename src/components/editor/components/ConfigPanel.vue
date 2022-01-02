@@ -1,9 +1,11 @@
 <template>
   <vs-sidebar v-model="active" open right :square="true" class="configPanel">
-    <div class="traitsContainer">
-      <div class="traits-container"></div>
+    <div class="styles-container">
+      <div class="traitsContainer">
+        <div class="traits-container"></div>
+      </div>
+      <div class="class-container"></div>
     </div>
-    <div class="class-container"></div>
   </vs-sidebar>
 </template>
 

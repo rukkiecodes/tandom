@@ -9,96 +9,94 @@
   bottom: 0;
   box-sizing: border-box;
 
-  .traitsContainer {
+  .styles-container {
     width: 100%;
-    overflow-y: auto;
+    height: 100%;
 
-    * {
-      color: #737373
-    }
-
-    .gjs-one-bg {
-      background-color: #fff;
-    }
-
-    .gjs-label {
-      color: #aaa;
-      font-size: 10px;
-      line-height: 25px;
-      font-weight: 600;
+    .gjs-category-title,
+    .gjs-layer-title,
+    .gjs-block-category .gjs-title,
+    .gjs-sm-sector .gjs-sm-title,
+    .gjs-clm-tags .gjs-sm-title {
+      padding: 9px 10px 9px 20px;
+      position: relative;
+      cursor: pointer;
+      color: #777;
+      border: none;
+      transition: .1s all ease-in-out;
+      font-size: 11px;
+      line-height: 12px;
       letter-spacing: 1px;
-      padding: 0 5px;
-      margin: 10px 0 5px;
-    }
-
-    .gjs-field {
+      font-weight: 600;
+      text-align: left;
+      text-transform: uppercase;
+      padding-right: 50px;
+      margin: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
       background-color: transparent;
 
-
-      input,
-      select {
-        border: 1px solid transparent;
-        border-radius: 12px;
-        background-color: #F4F7F8;
-        color: rgba(44, 62, 80, 1);
-        padding: 8px 13px 8px 10px;
-        transition: all .25s ease;
-        font-size: .8rem;
-        font-weight: 600;
-
-        option {
-          font-size: .8rem;
-          background-color: #ffffff;
-        }
-
-        &::placeholder {
-          opacity: .4;
-        }
-
-        &:focus {
-          padding-left: 15px;
-
-          &::placeholder {
-            opacity: 1;
-          }
-        }
-      }
-
-      .gjs-d-s-arrow {
-        border-top: 4 px solid #737373 !important;
+      &:hover {
+        background: #F5F5F5;
+        color: #3D3DF4;
       }
     }
-  }
-
-  .class-container {
-    width: 100%;
 
     .gjs-one-bg {
       background-color: #fff;
     }
 
-    * {
-      color: #737373
+    .gjs-category-open,
+    .gjs-block-category.gjs-open,
+    .gjs-sm-sector.gjs-sm-open,
+    .gjs-sm-open.gjs-clm-tags {
+      border-bottom: 1px solid transparent;
     }
 
-    #gjs-clm-label {
-      color: #aaa;
-      font-size: 10px;
-      line-height: 25px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      padding: 0 5px;
-      margin: 10px 0 5px;
-    }
+    .traitsContainer {
+      width: 100%;
+      min-height: auto;
+      background-color: red;
+      overflow-y: auto;
 
-    .gjs-clm-tags {
-      #gjs-clm-tags-field {
-        input {
+      * {
+        color: #737373
+      }
+
+      .gjs-one-bg {
+        background-color: #fff;
+      }
+
+      .gjs-label {
+        color: #aaa;
+        font-size: 10px;
+        line-height: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 0 5px;
+        margin: 10px 0 5px;
+      }
+
+      .gjs-field {
+        background-color: transparent;
+
+
+        input,
+        select {
+          border: 1px solid transparent;
+          border-radius: 12px;
+          background-color: #F4F7F8;
           color: rgba(44, 62, 80, 1);
+          padding: 8px 13px 8px 10px;
           transition: all .25s ease;
           font-size: .8rem;
           font-weight: 600;
-          padding: 8px 13px 8px 10px;
+
+          option {
+            font-size: .8rem;
+            background-color: #ffffff;
+          }
 
           &::placeholder {
             opacity: .4;
@@ -113,59 +111,110 @@
           }
         }
 
-        #gjs-clm-add-tag {
-          background: #195BFF;
-          border: 1px solid transparent;
-          border-radius: 5px;
-
-          svg {
-            fill: #fff;
-          }
+        .gjs-d-s-arrow {
+          border-top: 4 px solid #737373 !important;
         }
       }
+    }
 
-      .gjs-field {
-        background-color: #F4F7F8;
-        border-radius: 12px;
+    .class-container {
+      width: 100%;
+      height: auto;
 
-        #gjs-input-holder {
-          select {
-            cursor: pointer;
+      .gjs-one-bg {
+        background-color: #fff;
+      }
 
-            option {
-              font-size: .8rem;
-              background-color: #ffffff;
+      * {
+        color: #737373
+      }
+
+      #gjs-clm-label {
+        color: #aaa;
+        font-size: 10px;
+        line-height: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 0 5px;
+        margin: 10px 0 5px;
+      }
+
+      .gjs-clm-tags {
+        #gjs-clm-tags-field {
+          input {
+            color: rgba(44, 62, 80, 1);
+            transition: all .25s ease;
+            font-size: .8rem;
+            font-weight: 600;
+            padding: 8px 13px 8px 10px;
+
+            &::placeholder {
+              opacity: .4;
+            }
+
+            &:focus {
+              padding-left: 15px;
+
+              &::placeholder {
+                opacity: 1;
+              }
+            }
+          }
+
+          #gjs-clm-add-tag {
+            background: #195BFF;
+            border: 1px solid transparent;
+            border-radius: 5px;
+
+            svg {
+              fill: #fff;
             }
           }
         }
 
-        &:nth-child(1) {
-          padding: 3px 5px;
-          border-radius: 7px;
+        .gjs-field {
+          background-color: #F4F7F8;
+          border-radius: 12px;
 
-          .gjs-d-s-arrow {
-            border-top: 4px solid #737373;
+          #gjs-input-holder {
+            select {
+              cursor: pointer;
+
+              option {
+                font-size: .8rem;
+                background-color: #ffffff;
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            padding: 3px 5px;
+            border-radius: 7px;
+
+            .gjs-d-s-arrow {
+              border-top: 4px solid #737373;
+            }
           }
         }
       }
-    }
 
-    .gjs-three-bg {
-      background-color: #DCE6FF;
+      .gjs-three-bg {
+        background-color: #DCE6FF;
 
-      * {
-        color: #737373;
+        * {
+          color: #737373;
+          opacity: 1;
+        }
+      }
+
+      .gjs-clm-label-sel {
+        font-weight: 600;
+      }
+
+      .gjs-clm-sel-id {
+        color: #195BFF;
         opacity: 1;
       }
-    }
-
-    .gjs-clm-label-sel {
-      font-weight: 600;
-    }
-
-    .gjs-clm-sel-id {
-      color: #195BFF;
-      opacity: 1;
     }
   }
 }

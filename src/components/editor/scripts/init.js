@@ -7,6 +7,7 @@ import {
   selectorManager,
   traitManager,
   layerManager,
+  styleManager,
 } from "./managers"
 
 import blocks from "./blocks"
@@ -37,6 +38,8 @@ export default () => {
     traitManager,
 
     layerManager,
+
+    styleManager,
 
     panels,
 

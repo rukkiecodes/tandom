@@ -24,14 +24,6 @@
       background-color: #fff;
     }
 
-    .gjs-category-title,
-    .gjs-layer-title,
-    .gjs-block-category .gjs-title,
-    .gjs-sm-sector .gjs-sm-title,
-    .gjs-clm-tags .gjs-sm-title {
-      background-color: transparent;
-    }
-
     &::-webkit-scrollbar {
       width: 6px;
       height: 0
@@ -53,10 +45,6 @@
     overflow-y: hidden;
     transition: .3s all ease-in-out;
     border-top: 2px solid transparent;
-
-    &:hover {
-      border-top: 2px solid #195BFF;
-    }
 
     .blocksNav {
       width: 100%;
@@ -128,7 +116,7 @@
       .gjs-block-category .gjs-title,
       .gjs-sm-sector .gjs-sm-title,
       .gjs-clm-tags .gjs-sm-title {
-        background: none;
+        background-color: transparent;
         padding: 9px 10px 9px 20px;
         position: relative;
         cursor: pointer;

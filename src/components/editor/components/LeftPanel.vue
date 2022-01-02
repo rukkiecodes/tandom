@@ -1,86 +1,52 @@
 <template>
   <vs-sidebar open :square="true" class="leftPanel">
-    <vue-resizable :minHeight="31" :maxHeight="200" :fitParent="true" :active="['b']">
+    <vue-resizable
+      :minHeight="31"
+      :maxHeight="200"
+      :fitParent="true"
+      :active="['b']"
+    >
       <div class="layersContainer">
         <div class="layers-container"></div>
       </div>
     </vue-resizable>
     <div class="blocksContainer">
       <div class="blocksNav">
-        <vs-tooltip bottom dark>
-          <vs-button
-            transparent
-            :active="activeButton == 1"
-            @click="handleBlocksContainer"
-            style="width: 3em"
-          >
-            <span
-              style="font-size: 1.2rem"
-              class="mdi mdi-package-variant-closed"
-            ></span>
-          </vs-button>
+        <vs-button
+          transparent
+          :active="activeButton == 1"
+          @click="handleBlocksContainer"
+          style="width: 3em"
+        >
+          <span
+            style="font-size: 1.2rem"
+            class="mdi mdi-package-variant-closed"
+          ></span>
+        </vs-button>
 
-          <template #tooltip>
-            <span
-              style="
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-                  'Helvetica Neue', sans-serif;
-              "
-              >Basic blocks</span
-            >
-          </template>
-        </vs-tooltip>
+        <vs-button
+          transparent
+          :active="activeButton == 2"
+          @click="handleComponentsContainer"
+          style="width: 3em"
+        >
+          <span
+            style="font-size: 1.2rem"
+            class="mdi mdi-rocket-launch-outline"
+          ></span>
+        </vs-button>
 
-        <vs-tooltip bottom dark>
-          <vs-button
-            transparent
-            :active="activeButton == 2"
-            @click="handleComponentsContainer"
-            style="width: 3em"
-          >
-            <span
-              style="font-size: 1.2rem"
-              class="mdi mdi-rocket-launch-outline"
-            ></span>
-          </vs-button>
-
-          <template #tooltip>
-            <span
-              style="
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-                  'Helvetica Neue', sans-serif;
-              "
-              >Component blocks</span
-            >
-          </template>
-        </vs-tooltip>
-
-        <vs-tooltip bottom dark>
-          <vs-button
-            transparent
-            :active="activeButton == 3"
-            @click="handleRowsContainer"
-            style="width: 3em"
-          >
-            <span
-              style="font-size: 1.2rem"
-              class="mdi mdi-view-column-outline"
-            ></span>
-          </vs-button>
-
-          <template #tooltip>
-            <span
-              style="
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-                  'Helvetica Neue', sans-serif;
-              "
-              >Rows blocks</span
-            >
-          </template>
-        </vs-tooltip>
+        <vs-button
+          transparent
+          :active="activeButton == 3"
+          @click="handleRowsContainer"
+          style="width: 3em"
+        >
+          <span
+            style="font-size: 1.2rem"
+            class="mdi mdi-view-column-outline"
+          ></span>
+        </vs-button>
       </div>
       <div class="blocks">
         <div id="blocks" v-show="editor.showBlocks == true"></div>
