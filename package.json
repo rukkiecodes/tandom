@@ -9,6 +9,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "grapesjs": "^0.17.29",
+    "grapesjs-plugin-export": "^1.0.7",
+    "grapesjs-rte-extensions": "^1.0.7",
     "material-icons": "^1.10.4",
     "vue": "^2.6.11",
     "vue-resizable": "^2.0.5",

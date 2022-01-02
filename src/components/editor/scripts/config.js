@@ -1,3 +1,5 @@
+import store from "../../../store"
+
 export default (editor) => {
   editor.Commands.add("show-traits", {
     getTraitsEl(editor) {
@@ -167,5 +169,40 @@ export default (editor) => {
     document.querySelector("#componentBlocks").appendChild(blocksEl[7])
     document.querySelector("#componentBlocks").appendChild(blocksEl[8])
     document.querySelector("#componentBlocks").appendChild(blocksEl[9])
+
+    const previewButton = document.querySelector(".previewButton")
+    const exportButton = document.querySelector(".exportButton")
+    const undoButton = document.querySelector(".undoButton")
+    const redoButton = document.querySelector(".redoButton")
+    const mobileButton = document.querySelector(".mobileButton")
+    const laptopButton = document.querySelector(".laptopButton")
+
+    undoButton.addEventListener("click", () => {
+      editor.runCommand("core:undo")
+      store.state.editor.activeButton = 1
+    })
+
+    redoButton.addEventListener("click", () => {
+      editor.runCommand("core:redo")
+      store.state.editor.activeButton = 2
+    })
+
+    previewButton.addEventListener("click", () => {
+      store.state.editor.activeButton = 3
+      editor.runCommand("preview")
+    })
+
+    exportButton.addEventListener("click", () => {
+      editor.runCommand("export-template")
+      store.state.editor.activeButton = 4
+    })
+
+    mobileButton.addEventListener("click", () => {
+      editor.setDevice("Mobile")
+    })
+
+    laptopButton.addEventListener("click", () => {
+      editor.setDevice("Desktop")
+    })
   })
 }

@@ -8,6 +8,7 @@ import {
   traitManager,
   layerManager,
   styleManager,
+  deviceManager,
 } from "./managers"
 
 import blocks from "./blocks"
@@ -19,6 +20,9 @@ import typedPlugin from "./blocks/typed"
 import grapesjscustomcode from "./blocks/costomCode"
 import grapesjsTabs from "./blocks/tabs"
 import grapesjstooltip from "./blocks/tooltip"
+import grapesjspluginexport from "grapesjs-plugin-export"
+import grapesjsrteextensions from "grapesjs-rte-extensions"
+import "../assets/grapesjs-rte-extensions.css"
 
 // IMPORT PLACEHOLDER
 import placeholder from "./placeholder"
@@ -41,6 +45,8 @@ export default () => {
 
     styleManager,
 
+    deviceManager,
+
     panels,
 
     plugins: [
@@ -50,6 +56,8 @@ export default () => {
       grapesjscustomcode,
       grapesjsTabs,
       grapesjstooltip,
+      grapesjspluginexport,
+      grapesjsrteextensions,
     ],
 
     pluginsOpts: {},

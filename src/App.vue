@@ -5,6 +5,7 @@
 </template>
 <style>
 @import url(./assets/icon/css/materialdesignicons.min.css);
+@import url(./assets/icon2/css/line-awesome.min.css);
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
