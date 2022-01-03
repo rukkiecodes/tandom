@@ -6,20 +6,25 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Signup",
+    component: () => import("../views/auth/Signup.vue"),
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
+    path: "/signin",
+    name: "Signin",
+    component: () => import("../views/auth/Signin.vue"),
   },
   {
-    path: '/editor',
-    name: 'Editor',
-    component: () => import('../views/Editor.vue')
-  }
+    path: "/about",
+    name: "About",
+    component: () => import("../views/About.vue"),
+  },
+  {
+    path: "/editor",
+    name: "Editor",
+    component: () => import("../views/Editor.vue"),
+  },
 ]
 
 const router = new VueRouter({

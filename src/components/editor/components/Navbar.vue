@@ -64,7 +64,7 @@
 
 <script>
 import { mapState } from "vuex"
-import Logo from "./Logo.vue"
+import Logo from "../../Logo.vue"
 export default {
   data: () => ({
     active: "guide",

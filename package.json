@@ -7,11 +7,14 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
     "grapesjs": "^0.17.29",
     "grapesjs-plugin-export": "^1.0.7",
     "grapesjs-rte-extensions": "^1.0.7",
+    "gsap": "^3.9.1",
     "material-icons": "^1.10.4",
+    "three": "^0.136.0",
     "vue": "^2.6.11",
     "vue-resizable": "^2.0.5",
     "vue-router": "^3.2.0",
