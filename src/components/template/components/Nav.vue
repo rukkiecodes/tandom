@@ -1,8 +1,20 @@
 <template>
   <div class="hidden">
-    <vs-navbar shadow fixed square center-collapsed v-model="active">
+    <vs-navbar
+      class="nav"
+      shadow
+      fixed
+      square
+      center-collapsed
+      v-model="active"
+    >
       <template #left>
-        <vs-button @click="activeSidebar = !activeSidebar" flat icon>
+        <vs-button
+          class="menuButton"
+          @click="activeSidebar = !activeSidebar"
+          flat
+          icon
+        >
           <i class="las la-bars"></i>
         </vs-button>
         <Logo />
@@ -26,9 +38,6 @@
     </vs-navbar>
 
     <vs-sidebar absolute v-model="active" :open.sync="activeSidebar">
-      <template #logo>
-        <Logo />
-      </template>
       <vs-sidebar-item id="home" to="/template/cataloge">
         <template #icon>
           <i class="las la-copy"></i>
@@ -37,12 +46,8 @@
       </vs-sidebar-item>
       <template #footer>
         <vs-row justify="space-between">
-          <vs-avatar>
-            <img src="/avatars/avatar-5.png" alt="" />
-          </vs-avatar>
-
           <vs-avatar badge-color="danger" badge-position="top-right">
-            <i class="bx bx-bell"></i>
+            <i class="las la-bell"></i>
 
             <template #badge> 28 </template>
           </vs-avatar>
@@ -65,3 +70,7 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@import url(../assets/nav.css);
+</style>

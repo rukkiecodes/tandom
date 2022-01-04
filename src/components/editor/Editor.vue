@@ -17,7 +17,7 @@
 import Navbar from "./components/Navbar.vue"
 import LeftPanel from "./components/LeftPanel.vue"
 import ConfigPanel from "./components/ConfigPanel.vue"
-import PageLoad from "./components/PageLoad.vue"
+import PageLoad from "../PageLoad.vue"
 import init from "./scripts/init.js"
 export default {
   components: {
