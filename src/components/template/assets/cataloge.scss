@@ -109,4 +109,11 @@
       }
     }
   }
+
+  .paginationWraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0 4em 0;
+  }
 }
