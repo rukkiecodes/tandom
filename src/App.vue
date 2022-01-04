@@ -5,6 +5,16 @@
     </transition>
   </div>
 </template>
+
+<script>
+import Vue from 'vue';
+export default {
+  created() {
+    Vue.prototype.$vs = this.$vs;
+  }
+}
+</script>
+
 <style>
 @import url(./assets/icon/css/materialdesignicons.min.css);
 @import url(./assets/icon2/css/line-awesome.min.css);
