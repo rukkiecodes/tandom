@@ -19,7 +19,7 @@ export default {
         percent: this.percent,
         background: "#fff",
         opacity: 1,
-        type: "border",
+        type: "corners",
         scale: 2,
       })
       const interval = setInterval(() => {

@@ -1,16 +1,21 @@
 <template>
   <div class="cataloge">
     <div class="cardRows">
-      <vs-card class="card" v-for="(template, i) in templates" :key="i">
+      <vs-card class="card" v-for="(design, i) in templates" :key="i">
         <template #text>
-          <img :src="template.image" alt="" />
+          <img :src="design.image" alt="" />
           <div class="label">
             <i class="las la-envelope"></i>
           </div>
           <div class="overlay">
             <span class="type">Free Email Template</span>
-            <span class="title">Title of Template</span>
-            <vs-button class="overlayButton" color="#737373" size="small">
+            <span class="title">{{ design.category }}</span>
+            <vs-button
+              @click="previewTemplate(design)"
+              class="overlayButton"
+              color="#737373"
+              size="small"
+            >
               Preview
             </vs-button>
             <vs-button class="overlayButton" size="small">
@@ -25,11 +30,12 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex"
+import { mapActions, mapGetters, mapState } from "vuex"
+import Preview from "./components/Preview.vue"
 // @ts-nocheck
 export default {
   components: {
-    Preview: () => import("./components/Preview.vue"),
+    Preview,
   },
   mounted() {
     this.$nextTick(() => {
@@ -37,10 +43,11 @@ export default {
     })
   },
   methods: {
-    ...mapActions(["getTamplates"]),
+    ...mapActions(["getTamplates", "previewTemplate"]),
   },
   computed: {
     ...mapGetters(["templates"]),
+    ...mapState(["template"]),
   },
 }
 </script>

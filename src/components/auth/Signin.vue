@@ -1,6 +1,7 @@
 <template>
   <div class="signin">
     <Nav />
+    <PageLoad />
     <div class="splat"></div>
     <img src="./assets/images/takeOff.svg" class="takeOffCOntainer" />
     <img class="cash" src="./assets/images/cash.svg" alt="" />
@@ -77,8 +78,9 @@
 
 <script>
 // @ts-nocheck
-import { mapActions, mapState } from "vuex"
 import Nav from "./Nav.vue"
+import PageLoad from "../PageLoad.vue"
+import { mapActions, mapState } from "vuex"
 export default {
   data: () => ({
     hasVisiblePassword: false,
@@ -86,6 +88,7 @@ export default {
 
   components: {
     Nav,
+    PageLoad
   },
 
   methods: {
