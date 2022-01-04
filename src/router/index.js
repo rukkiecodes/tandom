@@ -25,6 +25,18 @@ const routes = [
     name: "Editor",
     component: () => import("../views/Editor.vue"),
   },
+  {
+    path: "/Template",
+    name: "Template",
+    component: () => import("../views/template/Template.vue"),
+    children: [
+      {
+        path: "cataloge",
+        name: "Cataloge",
+        component: () => import("../views/template/Cataloge.vue")
+      },
+    ],
+  },
 ]
 
 const router = new VueRouter({
