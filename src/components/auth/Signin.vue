@@ -18,7 +18,11 @@
       <vs-card class="formCard" type="1">
         <template #text>
           <div class="center content-inputs">
-            <vs-input v-model="email" placeholder="Name" type="email">
+            <vs-input
+              v-model="signin.credential.email"
+              placeholder="Name"
+              type="email"
+            >
               <template #icon>
                 <i class="las la-at" style="font-size: 1.2rem"></i>
               </template>
@@ -27,7 +31,7 @@
           <div class="center content-inputs">
             <vs-input
               type="password"
-              v-model="password"
+              v-model="signin.credential.password"
               placeholder="Password"
               :progress="getProgress"
               :visiblePassword="hasVisiblePassword"
@@ -56,7 +60,12 @@
             <router-link to="/recoverPassword">Recover Password</router-link>
           </div>
           <div class="center signinButtonContainer">
-            <vs-button class="signinButton" size="large" block
+            <vs-button
+              class="signinButton"
+              size="large"
+              @click="signinUser"
+              :loading="signin.loading"
+              block
               >Sign Up</vs-button
             >
           </div>
@@ -67,11 +76,11 @@
 </template>
 
 <script>
+// @ts-nocheck
+import { mapActions, mapState } from "vuex"
 import Nav from "./Nav.vue"
 export default {
   data: () => ({
-    email: "",
-    password: "",
     hasVisiblePassword: false,
   }),
 
@@ -79,8 +88,8 @@ export default {
     Nav,
   },
 
-  mounted() {
-    this.$nextTick(() => {})
+  methods: {
+    ...mapActions(["signinUser"]),
   },
 
   computed: {
@@ -89,36 +98,38 @@ export default {
 
       // at least one number
 
-      if (/\d/.test(this.password)) {
+      if (/\d/.test(this.signin.credential.password)) {
         progress += 20
       }
 
       // at least one capital letter
 
-      if (/(.*[A-Z].*)/.test(this.password)) {
+      if (/(.*[A-Z].*)/.test(this.signin.credential.password)) {
         progress += 20
       }
 
       // at menons a lowercase
 
-      if (/(.*[a-z].*)/.test(this.password)) {
+      if (/(.*[a-z].*)/.test(this.signin.credential.password)) {
         progress += 20
       }
 
       // more than 5 digits
 
-      if (this.password.length >= 6) {
+      if (this.signin.credential.password.length >= 6) {
         progress += 20
       }
 
       // at least one special character
 
-      if (/[^A-Za-z0-9]/.test(this.password)) {
+      if (/[^A-Za-z0-9]/.test(this.signin.credential.password)) {
         progress += 20
       }
 
       return progress
     },
+
+    ...mapState(["signin"]),
   },
 }
 </script>

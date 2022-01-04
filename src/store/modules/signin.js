@@ -1,11 +1,11 @@
 import router from "../../router"
 import axios from "axios"
+import vueCookies from "vue-cookies"
 import Vue from "vue"
 
 export default {
   state: {
     credential: {
-      name: "",
       email: "",
       password: "",
     },
@@ -14,47 +14,47 @@ export default {
   },
 
   mutations: {
-    signupUser: (state, response) => {
-      console.log(response)
-      if (response.status == 201) {
+    signinUser: (state, response) => {
+      if (response.status == 200) {
         state.loading = false
-        router.push("/signin")
+        vueCookies.set("tandom token", response.data.data.token)
+        vueCookies.set("tandom user", response.data.data.user)
+        router.push("/cataloge")
       } else {
         state.loading = false
-        router.push("/")
+        router.push("/signin")
       }
     },
   },
 
   actions: {
-    async signupUser({ commit }) {
+    async signinUser({ commit }) {
       let emailRegEx = /\S+@\S+\.\S+/
-      this.state.signup.loading = true
+      this.state.signin.loading = true
       if (
-        this.state.signup.credential.name != "" &&
-        emailRegEx.test(this.state.signup.credential.email) &&
-        this.state.signup.credential.password != ""
+        emailRegEx.test(this.state.signin.credential.email) &&
+        this.state.signin.credential.password != ""
       ) {
         try {
           const response = await axios.post(
-            "http://localhost:3000/auth/signup",
-            this.state.signup.credential
+            "http://localhost:3000/auth/signin",
+            this.state.signin.credential
           )
-          commit("signupUser", response)
-          this.state.signup.loading = false
+          commit("signinUser", response)
+          this.state.signin.loading = false
         } catch (error) {
           console.log(error)
-          this.state.signup.loading = false
+          this.state.signin.loading = false
           Vue.prototype.$vs.notification({
             icon: `<i class="las la-exclamation-triangle"></i>`,
             border: "rgb(255, 71, 87)",
             position: "top-right",
             title: "Error !!!",
-            text: `This email is taken try another`,
+            text: `Sign in error. Check your details the try again.`,
           })
         }
       } else {
-        this.state.signup.loading = false
+        this.state.signin.loading = false
         Vue.prototype.$vs.notification({
           icon: `<i class="las la-exclamation-triangle"></i>`,
           border: "rgb(255, 71, 87)",

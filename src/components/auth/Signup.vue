@@ -25,7 +25,11 @@
             </vs-input>
           </div>
           <div class="center content-inputs">
-            <vs-input v-model="signup.credential.email" placeholder="Name" type="email">
+            <vs-input
+              v-model="signup.credential.email"
+              placeholder="Name"
+              type="email"
+            >
               <template #icon>
                 <i class="las la-at" style="font-size: 1.2rem"></i>
               </template>
@@ -60,7 +64,12 @@
             </vs-input>
           </div>
           <div class="center signupButtonContainer">
-            <vs-button class="signupButton" size="large" @click="signupUser" :loading="signup.loading" block
+            <vs-button
+              class="signupButton"
+              size="large"
+              @click="signupUser"
+              :loading="signup.loading"
+              block
               >Sign Up</vs-button
             >
           </div>
@@ -84,7 +93,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["signupUser"])
+    ...mapActions(["signupUser"]),
   },
 
   computed: {
@@ -124,7 +133,7 @@ export default {
       return progress
     },
 
-    ...mapState(["signup"])
+    ...mapState(["signup"]),
   },
 }
 </script>
