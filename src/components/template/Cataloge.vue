@@ -1,7 +1,7 @@
 <template>
   <div class="cataloge">
     <div class="head">
-      <h1>1010+ Free HTML Professional Email Templates</h1>
+      <h1>{{ templates.length - 1 }}+ Free HTML Professional Email Templates</h1>
       <p>
         Choose your favorite template or
         <router-link to="/hire">hire a designer</router-link>
@@ -34,7 +34,7 @@
             >
               Preview
             </vs-button>
-            <vs-button class="overlayButton" size="small">
+            <vs-button @click="editTemplate(design)" class="overlayButton" size="small">
               Get Started
             </vs-button>
           </div>
@@ -103,7 +103,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["getTamplates", "previewTemplate"]),
+    ...mapActions(["getTamplates", "previewTemplate", "editTemplate"]),
 
     setPages() {
       let number_of_pages = Math.ceil(

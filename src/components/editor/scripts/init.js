@@ -1,5 +1,6 @@
 import grapesjs from "grapesjs"
 import "../assets/grapes.css"
+import vueCookies from "vue-cookies"
 
 import {
   panels,
@@ -77,7 +78,9 @@ export default () => {
     },
   })
 
-  editor.addComponents(placeholder)
+  let design = JSON.parse(localStorage.getItem("designTemplate"))
+
+  editor.addComponents(design.html)
 
   blocks(editor)
   config(editor)

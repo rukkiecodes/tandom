@@ -13,8 +13,8 @@
         {{ design.category }}
       </h3>
     </template>
-    <div class="con-content">
-      <div id="html" v-html="template.previewTemplateHtml"></div>
+    <div v-for="(design, i) in previewTemplate" :key="i" class="con-content">
+      <div id="html" v-html="design.html"></div>
     </div>
   </vs-dialog>
 </template>

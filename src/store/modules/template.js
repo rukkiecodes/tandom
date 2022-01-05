@@ -1,12 +1,14 @@
+// @ts-nocheck
 import axios from "axios"
 import request from "request"
+import router from "../../router"
+import vueCookies from "vue-cookies"
 
 export default {
   state: {
     previewDialog: false,
     templates: [],
     previewTemplate: [],
-    previewTemplateHtml: ``
   },
 
   getters: {
@@ -25,11 +27,32 @@ export default {
         if (!error && response.statusCode == 200) {
           state.previewDialog = true
           state.previewTemplate = []
-          state.previewTemplateHtml = ``
-          state.previewTemplate.push(design)
-          state.previewTemplateHtml = html
+          state.previewTemplate.push({
+            category: design.category,
+            html,
+            image: design.image,
+          })
+          console.log(state.previewTemplate)
         }
       })
+    },
+
+    editTemplate: (state, design) => {
+      request(design.html, (error, response, html) => {
+        if (!error && response.statusCode == 200) {
+          localStorage.setItem(
+            "designTemplate",
+            JSON.stringify({
+              category: design.category,
+              html,
+              image: design.image,
+            })
+          )
+          router.push("/editor")
+        }
+      })
+
+      return state
     },
   },
 
@@ -45,6 +68,10 @@ export default {
 
     previewTemplate({ commit }, design) {
       commit("previewTemplate", design)
+    },
+
+    editTemplate({ commit }, design) {
+      commit("editTemplate", design)
     },
   },
 }

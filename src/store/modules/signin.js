@@ -1,3 +1,4 @@
+// @ts-nocheck
 import router from "../../router"
 import axios from "axios"
 import vueCookies from "vue-cookies"
@@ -17,9 +18,9 @@ export default {
     signinUser: (state, response) => {
       if (response.status == 200) {
         state.loading = false
-        vueCookies.set("tandom token", response.data.data.token)
-        vueCookies.set("tandom user", response.data.data.user)
-        router.push("/cataloge")
+        vueCookies.set("tandom token", response.data.data.token, "7d")
+        vueCookies.set("tandom user", response.data.data.user, "7d")
+        router.push("/template/cataloge")
       } else {
         state.loading = false
         router.push("/signin")

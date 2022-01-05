@@ -37,6 +37,7 @@
               :visiblePassword="hasVisiblePassword"
               icon-after
               @click-icon="hasVisiblePassword = !hasVisiblePassword"
+              @keypress.enter="signinUser"
             >
               <template #icon>
                 <i
@@ -66,7 +67,7 @@
               @click="signinUser"
               :loading="signin.loading"
               block
-              >Sign Up</vs-button
+              >Sign In</vs-button
             >
           </div>
         </template>

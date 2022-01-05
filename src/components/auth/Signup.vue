@@ -44,6 +44,7 @@
               :visiblePassword="hasVisiblePassword"
               icon-after
               @click-icon="hasVisiblePassword = !hasVisiblePassword"
+              @keypress.enter="signupUser"
             >
               <template #icon>
                 <i
