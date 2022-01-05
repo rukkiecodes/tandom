@@ -116,4 +116,11 @@
     align-items: center;
     padding: 2em 0 4em 0;
   }
+
+  .scrollToTop {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    transition: all .25s ease;
+  }
 }

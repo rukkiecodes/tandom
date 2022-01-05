@@ -256,4 +256,12 @@
           align-items: center;
   padding: 2em 0 4em 0;
 }
+
+.cataloge .scrollToTop {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
 /*# sourceMappingURL=cataloge.css.map */

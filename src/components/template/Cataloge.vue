@@ -27,7 +27,12 @@
     </div>
 
     <div class="paginationWraper">
-      <vs-pagination progress not-margin v-model="page" :length="pages.length" />
+      <vs-pagination
+        progress
+        not-margin
+        v-model="page"
+        :length="pages.length"
+      />
       <!-- <vs-button :disabled="page <= 1" @click="page--" icon>
         <i class="las la-angle-double-left"></i>
       </vs-button>
@@ -46,6 +51,11 @@
         <i class="las la-angle-double-right"></i>
       </vs-button> -->
     </div>
+
+    <!-- <vs-button v-show="showScroll" @click="scroll" class="scrollToTop" icon>
+      <i class="las la-angle-double-up"></i>
+    </vs-button> -->
+    <ScrollTo />
     <Preview />
   </div>
 </template>
@@ -54,15 +64,18 @@
 // @ts-nocheck
 import { mapActions, mapGetters, mapState } from "vuex"
 import Preview from "./components/Preview.vue"
+import ScrollTo from "../ScrollTo.vue"
 export default {
   data: () => ({
     page: 1,
     perPage: 9,
     pages: [],
+    // showScroll: false
   }),
 
   components: {
     Preview,
+    ScrollTo
   },
 
   watch: {
@@ -74,6 +87,14 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.getTamplates()
+
+      // window.addEventListener("scroll", () => {
+      //   if(window.scrollY >= 200) {
+      //     this.showScroll = true
+      //   } else {
+      //     this.showScroll = false
+      //   }
+      // })
     })
   },
 
@@ -95,6 +116,10 @@ export default {
       let from = page * perPage - perPage
       let to = page * perPage
       return templates.slice(from, to)
+    },
+
+    scroll() {
+      window.scrollTo(0, 0)
     },
   },
 
