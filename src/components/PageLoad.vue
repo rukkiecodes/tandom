@@ -17,9 +17,10 @@ export default {
     openLoading() {
       const loading = this.$vs.loading({
         percent: this.percent,
+        text: 'Loading...',
         background: "#fff",
         opacity: 1,
-        type: "corners",
+        type: "border",
         scale: 2,
       })
       const interval = setInterval(() => {

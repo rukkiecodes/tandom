@@ -103,6 +103,50 @@
           box-sizing: border-box;
 }
 
+.cataloge .head {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -.5em;
+  position: relative;
+}
+
+.cataloge .head h1 {
+  margin-bottom: 0;
+  text-align: center;
+  color: #195BFF;
+}
+
+.cataloge .head p {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.cataloge .head p a {
+  color: inherit;
+  font-weight: 600;
+}
+
+.cataloge .head .selectCategory {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  min-width: 300px;
+}
+
 .cataloge .cardRows {
   padding: 1em;
   -webkit-column-count: 6;
@@ -110,6 +154,7 @@
   -webkit-column-gap: 1;
           column-gap: 1;
   position: relative;
+  margin-top: 2em;
 }
 
 @media (max-width: 768px) {

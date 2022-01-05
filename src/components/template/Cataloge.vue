@@ -1,5 +1,21 @@
 <template>
   <div class="cataloge">
+    <div class="head">
+      <h1>1010+ Free HTML Professional Email Templates</h1>
+      <p>
+        Choose your favorite template or
+        <router-link to="/hire">hire a designer</router-link>
+      </p>
+
+      <vs-select
+        class="selectCategory"
+        :state="'dark'"
+        label-placeholder="Template Categories"
+        v-model="value"
+      >
+        <vs-option label="Discount" value="1"> Discount </vs-option>
+      </vs-select>
+    </div>
     <div class="cardRows">
       <vs-card class="card" v-for="(design, i) in displayedTemplates" :key="i">
         <template #text>
@@ -51,10 +67,6 @@
         <i class="las la-angle-double-right"></i>
       </vs-button> -->
     </div>
-
-    <!-- <vs-button v-show="showScroll" @click="scroll" class="scrollToTop" icon>
-      <i class="las la-angle-double-up"></i>
-    </vs-button> -->
     <ScrollTo />
     <Preview />
   </div>
@@ -70,12 +82,12 @@ export default {
     page: 1,
     perPage: 9,
     pages: [],
-    // showScroll: false
+    value: "",
   }),
 
   components: {
     Preview,
-    ScrollTo
+    ScrollTo,
   },
 
   watch: {
@@ -87,14 +99,6 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.getTamplates()
-
-      // window.addEventListener("scroll", () => {
-      //   if(window.scrollY >= 200) {
-      //     this.showScroll = true
-      //   } else {
-      //     this.showScroll = false
-      //   }
-      // })
     })
   },
 
@@ -116,10 +120,6 @@ export default {
       let from = page * perPage - perPage
       let to = page * perPage
       return templates.slice(from, to)
-    },
-
-    scroll() {
-      window.scrollTo(0, 0)
     },
   },
 

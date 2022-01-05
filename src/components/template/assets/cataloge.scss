@@ -5,11 +5,47 @@
 }
 
 .cataloge {
+  .head {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -.5em;
+    position: relative;
+
+    h1 {
+      margin-bottom: 0;
+      text-align: center;
+      color: #195BFF
+    }
+
+    p {
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.1rem;
+      color: rgba(0, 0, 0, 0.5);
+
+      a {
+        color: inherit;
+        font-weight: 600;
+      }
+    }
+
+    .selectCategory {
+      position: absolute;
+      bottom: 2%;
+      right: 2%;
+      min-width: 300px;
+    }
+  }
+
   .cardRows {
     padding: 1em;
     column-count: 6;
     column-gap: 1;
     position: relative;
+    margin-top: 2em;
 
     @include mobile {
       column-count: initial;
