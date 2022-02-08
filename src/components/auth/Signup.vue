@@ -18,10 +18,7 @@
       <vs-card class="formCard" type="1">
         <template #text>
           <div class="center content-inputs">
-            <vs-input
-              v-model="signup.credential.firstname"
-              placeholder="First name"
-            >
+            <vs-input block placeholder="Name" v-model="signup.credential.name">
               <template #icon>
                 <i class="las la-user" style="font-size: 1.2rem"></i>
               </template>
@@ -29,19 +26,9 @@
           </div>
           <div class="center content-inputs">
             <vs-input
-              v-model="signup.credential.lastname"
-              placeholder="Last name"
-            >
-              <template #icon>
-                <i class="las la-user" style="font-size: 1.2rem"></i>
-              </template>
-            </vs-input>
-          </div>
-          <div class="center content-inputs">
-            <vs-input
-              v-model="signup.credential.email"
-              placeholder="Email"
               type="email"
+              placeholder="Email"
+              v-model="signup.credential.email"
             >
               <template #icon>
                 <i class="las la-at" style="font-size: 1.2rem"></i>
@@ -50,14 +37,14 @@
           </div>
           <div class="center content-inputs">
             <vs-input
+              icon-after
               type="password"
-              v-model="signup.credential.password"
               placeholder="Password"
               :progress="getProgress"
-              :visiblePassword="hasVisiblePassword"
-              icon-after
-              @click-icon="hasVisiblePassword = !hasVisiblePassword"
               @keypress.enter="signupUser"
+              v-model="signup.credential.password"
+              :visiblePassword="hasVisiblePassword"
+              @click-icon="hasVisiblePassword = !hasVisiblePassword"
             >
               <template #icon>
                 <i
@@ -77,29 +64,10 @@
               </template>
             </vs-input>
           </div>
-          <div class="center content-inputs">
-            <vs-input
-              v-model="signup.credential.password_confirmation"
-              placeholder="Confirm password"
-              type="password"
-            >
-              <template #icon>
-                <i class="las la-lock" style="font-size: 1.2rem"></i>
-              </template>
-            </vs-input>
-          </div>
-          <div class="center content-inputs">
-            <vs-input
-              v-model="signup.credential.referral_code"
-              placeholder="Referral code"
-            >
-            </vs-input>
-          </div>
           <div class="center authButtonContainer">
             <vs-button
               class="authButton"
               size="large"
-              @click="signupUser"
               :loading="signup.loading"
               block
               color="#6E14EC"
@@ -126,7 +94,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["signupUser"]),
+    // ...mapActions(["signupUser"]),
   },
 
   computed: {
