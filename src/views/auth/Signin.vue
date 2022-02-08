@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import Signin from "../../components/auth/Signin.vue"
+import Signin from "../../components/auth/Signin.vue";
 export default {
   components: {
     Signin,
   },
-}
+};
 </script>

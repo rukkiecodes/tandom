@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACE,IADE,CACF,WAAW,CAAC;EACV,OAAO,EAAE,IACX;CAAC",
-    "sources": [
-        "nav.scss"
-    ],
-    "names": [],
-    "file": "nav.css"
-}
