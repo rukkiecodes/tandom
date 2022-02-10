@@ -7,10 +7,12 @@ import Vuesax from "vuesax"
 Vue.config.productionTip = false
 
 import "./assets/vuesax.css"
+import vuetify from './plugins/vuetify'
 Vue.use(Vuesax)
 
 new Vue({
   router,
   store,
-  render: (h) => h(App),
+  vuetify,
+  render: (h) => h(App)
 }).$mount("#app")
