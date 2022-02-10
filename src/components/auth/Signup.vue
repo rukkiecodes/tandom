@@ -9,7 +9,7 @@
 
     <div class="mainSection">
       <div class="textArea">
-        <h1>Sign Up and<br />Enjoy Safer Transactions</h1>
+        <h1>Sign Up and Enjoy Free Templates</h1>
         <p>
           If you already have an account<br />You can
           <router-link to="/signin">Sign In here!</router-link>
@@ -48,9 +48,9 @@
             >
               <template #icon>
                 <i
-                  v-if="!hasVisiblePassword"
                   class="las la-eye"
                   style="font-size: 1.2rem"
+                  v-if="!hasVisiblePassword"
                 ></i>
                 <i
                   v-else
@@ -66,11 +66,12 @@
           </div>
           <div class="center authButtonContainer">
             <vs-button
-              class="authButton"
-              size="large"
-              :loading="signup.loading"
               block
+              size="large"
               color="#6E14EC"
+              class="authButton"
+              @click="signupUser"
+              :loading="signup.loading"
               >Sign Up</vs-button
             >
           </div>
@@ -94,7 +95,7 @@ export default {
   },
 
   methods: {
-    // ...mapActions(["signupUser"]),
+    ...mapActions(["signupUser"]),
   },
 
   computed: {

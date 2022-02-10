@@ -269,13 +269,13 @@
   margin-top: 0;
 }
 
-.mainSection .formCard .recoverPassword {
+.mainSection .formCard .forgotPassword {
   width: 100%;
   margin-top: 1em;
   margin-bottom: 3em;
 }
 
-.mainSection .formCard .recoverPassword a {
+.mainSection .formCard .forgotPassword a {
   float: right;
   margin-right: .3em;
   color: #4460F1;
