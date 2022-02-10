@@ -9,7 +9,7 @@
 
     <div class="mainSection">
       <div class="textArea">
-        <h1>Sign In and<br />Enjoy Safer Transactions</h1>
+        <h1>Sign In and Enjoy Safer Transactions</h1>
         <p>
           If you already have an account<br />You can
           <router-link to="/signup">Register here!</router-link>
@@ -62,12 +62,12 @@
           </div>
           <div class="center authButtonContainer">
             <vs-button
-              class="authButton"
+              block
               size="large"
+              color="#6E14EC"
+              class="authButton"
               @click="signinUser"
               :loading="signin.loading"
-              block
-              color="#6E14EC"
               >Sign In</vs-button
             >
           </div>
