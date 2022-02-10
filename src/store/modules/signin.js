@@ -16,7 +16,7 @@ export default {
     signinUser: (state, response) => {
       console.log("User: ", response.data)
       if (response.data.success == true) {
-        router.push("/template")
+        router.push("/templates")
       }
       if (response.data.success != true) {
         router.push("/")

@@ -15,6 +15,18 @@ const routes = [
     component: () => import("../views/auth/Signup.vue"),
   },
   {
+    path: "/templates",
+    name: "Templates",
+    component: () => import("../views/template/Templates.vue"),
+    children: [
+      {
+        path: "/templates",
+        name: "Templates",
+        component: () => import("../components/template/Templates.vue"),
+      },
+    ],
+  },
+  {
     path: "/about",
     name: "About",
     component: () => import("../views/About.vue"),
