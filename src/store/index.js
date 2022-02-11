@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import signup from "./modules/signup"
 import signin from "./modules/signin"
 import navigation from "./modules/navigation"
+import template from "./modules/template"
 
 Vue.use(Vuex)
 
@@ -12,5 +13,6 @@ export default new Vuex.Store({
     signup,
     signin,
     navigation,
+    template,
   },
 })

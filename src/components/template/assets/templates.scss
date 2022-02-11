@@ -1,0 +1,95 @@
+.cardRows {
+  padding: 1em;
+  column-count: 6;
+  column-gap: 1;
+  position: relative;
+  margin-top: 2em;
+
+  // @include mobile {
+  //   column-count: initial;
+  //   column-gap: initial;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   align-items: flex-start;
+  // }
+
+  .card {
+    width: 100%;
+    padding: 0em;
+    margin-bottom: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, .05);
+    object-fit: cover;
+
+
+    .vs-card {
+      object-fit: cover;
+
+      .vs-card__text {
+        object-fit: cover;
+        padding: 0
+      }
+    }
+
+    &:hover {
+      .overlay {
+        top: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #195BFF;
+      border-radius: 0 8px 0 8px;
+
+      i {
+        color: #fff;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: -100%;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      padding: 1em;
+      padding-right: 1.6em;
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        color: #195BFF;
+      }
+
+      .overlayButton {
+        width: 100%;
+        font-weight: bold
+      }
+    }
+  }
+}

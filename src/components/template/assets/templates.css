@@ -1,0 +1,111 @@
+.cardRows {
+  padding: 1em;
+  -webkit-column-count: 6;
+          column-count: 6;
+  -webkit-column-gap: 1;
+          column-gap: 1;
+  position: relative;
+  margin-top: 2em;
+}
+
+.cardRows .card {
+  width: 100%;
+  padding: 0em;
+  margin-bottom: 1em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.05);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cardRows .card .vs-card {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cardRows .card .vs-card .vs-card__text {
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+}
+
+.cardRows .card:hover .overlay {
+  top: 0;
+}
+
+.cardRows .card img {
+  width: 100%;
+  height: auto;
+}
+
+.cardRows .card .label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #195BFF;
+  border-radius: 0 8px 0 8px;
+}
+
+.cardRows .card .label i {
+  color: #fff;
+}
+
+.cardRows .card .overlay {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 1em;
+  padding-right: 1.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cardRows .card .overlay .title {
+  color: #195BFF;
+}
+
+.cardRows .card .overlay .overlayButton {
+  width: 100%;
+  font-weight: bold;
+}
+/*# sourceMappingURL=templates.css.map */

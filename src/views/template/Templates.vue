@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex"
+import { mapActions, mapGetters } from "vuex"
 import Logo from "../../components/Logo.vue"
 export default {
   data: () => ({
@@ -64,6 +64,7 @@ export default {
     this.$nextTick(() => {
       this.removeBorder()
       this.updateNav()
+      this.getTemplates()
     })
   },
 
@@ -72,6 +73,8 @@ export default {
   },
 
   methods: {
+    ...mapActions(["getTemplates"]),
+
     removeBorder() {
       const border = document.querySelector(".v-navigation-drawer__border")
       if (border) border.style.display = "none"
