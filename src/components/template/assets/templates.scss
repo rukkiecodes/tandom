@@ -3,7 +3,6 @@
   column-count: 6;
   column-gap: 1;
   position: relative;
-  margin-top: 2em;
 
   // @include mobile {
   //   column-count: initial;
@@ -17,7 +16,6 @@
   .card {
     width: 100%;
     padding: 0em;
-    margin-bottom: 1em;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -25,24 +23,16 @@
     align-items: center;
     break-inside: avoid;
     margin-bottom: 1rem;
+    margin-bottom: 1em;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, .05);
+    box-shadow: none;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
     object-fit: cover;
-
-
-    .vs-card {
-      object-fit: cover;
-
-      .vs-card__text {
-        object-fit: cover;
-        padding: 0
-      }
-    }
 
     &:hover {
       .overlay {
-        top: 0;
+        opacity: 1;
       }
     }
 
@@ -72,15 +62,17 @@
     .overlay {
       position: absolute;
       left: 0;
-      top: -100%;
+      top: 0;
       z-index: 1;
       width: 100%;
       height: 100%;
       background: #fff;
       padding: 1em;
-      padding-right: 1.6em;
+      padding-right: 1em;
       display: flex;
       flex-direction: column;
+      transition: .1s all ease-in-out;
+      opacity: 0;
 
       .title {
         color: #195BFF;
@@ -88,7 +80,9 @@
 
       .overlayButton {
         width: 100%;
-        font-weight: bold
+        font-weight: bold;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }

@@ -39,7 +39,7 @@ export default {
                 ".vs-dialog--scroll .vs-dialog__content"
               )
               height.style.maxHeight = "90%"
-              console.log(state.preview, height)
+              console.log(state.preview)
             }, 100)
           }
         }

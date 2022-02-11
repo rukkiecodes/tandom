@@ -1,35 +1,36 @@
 <template>
   <div class="template">
     <div class="cardRows">
-      <vs-card class="card" v-for="(design, i) in displayDesigns" :key="i">
-        <template #text>
-          <img :src="`http://localhost:3000/${design.image}`" alt="" />
-          <div class="label">
-            <i class="las la-envelope"></i>
-          </div>
-          <div class="overlay">
-            <span class="type"></span>
-            <span class="title text-body-1 font-weight-bold text--uppercase">{{
-              design.category[0]
-            }}</span>
-            <vs-button
-              @click="previewDesign(design)"
-              class="overlayButton"
-              color="#737373"
-              size="small"
-            >
-              Preview
-            </vs-button>
-            <vs-button
-              @click="editTemplate(design)"
-              class="overlayButton"
-              size="small"
-            >
-              Get Started
-            </vs-button>
-          </div>
-        </template>
-      </vs-card>
+      <div class="card" v-for="(design, i) in displayDesigns" :key="i">
+        <div class="label">
+          <i class="las la-envelope"></i>
+        </div>
+        <img :src="`http://localhost:3000/${design.image}`" alt="" />
+
+        <div class="overlay">
+          <span class="type"></span>
+          <span class="title text-body-1 font-weight-bold text--uppercase">{{
+            design.category[0]
+          }}</span>
+          <vs-button
+            block
+            size="small"
+            color="#737373"
+            class="overlayButton"
+            @click="previewDesign(design)"
+          >
+            Preview
+          </vs-button>
+          <vs-button
+            block
+            size="small"
+            class="overlayButton"
+            @click="editTemplate(design)"
+          >
+            Get Started
+          </vs-button>
+        </div>
+      </div>
     </div>
 
     <div class="paginationWraper d-flex justify-center">
@@ -68,7 +69,7 @@ export default {
   }),
 
   components: {
-    Preview: () => import("./components/Preview.vue")
+    Preview: () => import("./components/Preview.vue"),
   },
 
   watch: {

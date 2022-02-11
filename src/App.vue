@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <v-main>
-      <router-view/>
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
     </v-main>
   </v-app>
 </template>
@@ -10,6 +12,7 @@
 import Vue from "vue"
 export default {
   name: "App",
+
   created() {
     Vue.prototype.$vs = this.$vs
   },
@@ -17,12 +20,21 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url(./assets/icon/css/materialdesignicons.min.css);
 @import url(./assets/icon2/css/line-awesome.min.css);
 
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .fade-enter-active,

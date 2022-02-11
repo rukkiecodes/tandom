@@ -6,17 +6,27 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: "/",
-    name: "Signin",
-    component: () => import("../views/auth/Signin.vue"),
-  },
-  {
-    path: "/signup",
     name: "Signup",
     component: () => import("../views/auth/Signup.vue"),
   },
   {
+    path: "/signin",
+    name: "Signin",
+    component: () => import("../views/auth/Signin.vue"),
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: () => import("../views/About.vue"),
+  },
+  {
+    path: "/editor",
+    name: "Editor",
+    component: () => import("../views/Editor.vue"),
+  },
+  {
     path: "/templates",
-    name: "Templates",
+    name: "Template",
     component: () => import("../views/template/Templates.vue"),
     children: [
       {
@@ -25,11 +35,6 @@ const routes = [
         component: () => import("../components/template/Templates.vue"),
       },
     ],
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: () => import("../views/About.vue"),
   },
 ]
 

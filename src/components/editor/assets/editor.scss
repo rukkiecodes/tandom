@@ -1,0 +1,28 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 44px;
+  margin-left: 250px;
+  position: relative;
+  width: calc(100% - 500px);
+  height: 93.7vh;
+
+  .gjsContainer {
+    width: 100%;
+    height: 95%;
+
+    /* Let's highlight canvas boundaries */
+    #editor {
+      border: none;
+    }
+
+    /* Reset some default styling */
+    .gjs-cv-canvas {
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

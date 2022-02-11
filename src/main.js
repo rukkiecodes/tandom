@@ -3,12 +3,12 @@ import App from "./App.vue"
 import router from "./router"
 import store from "./store"
 import Vuesax from "vuesax"
-
-Vue.config.productionTip = false
-
 import "./assets/vuesax.css"
 import vuetify from './plugins/vuetify'
+
 Vue.use(Vuesax)
+
+Vue.config.productionTip = false
 
 new Vue({
   router,

@@ -5,13 +5,11 @@
   -webkit-column-gap: 1;
           column-gap: 1;
   position: relative;
-  margin-top: 2em;
 }
 
 .cardRows .card {
   width: 100%;
   padding: 0em;
-  margin-bottom: 1em;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,27 +27,18 @@
   -webkit-column-break-inside: avoid;
           break-inside: avoid;
   margin-bottom: 1rem;
+  margin-bottom: 1em;
   border-radius: 8px;
   overflow: hidden;
-  -webkit-box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.05);
-          box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.cardRows .card .vs-card {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cardRows .card .vs-card .vs-card__text {
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 0;
 }
 
 .cardRows .card:hover .overlay {
-  top: 0;
+  opacity: 1;
 }
 
 .cardRows .card img {
@@ -84,13 +73,13 @@
 .cardRows .card .overlay {
   position: absolute;
   left: 0;
-  top: -100%;
+  top: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
   background: #fff;
   padding: 1em;
-  padding-right: 1.6em;
+  padding-right: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,6 +87,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: .1s all ease-in-out;
+  transition: .1s all ease-in-out;
+  opacity: 0;
 }
 
 .cardRows .card .overlay .title {
@@ -107,5 +99,7 @@
 .cardRows .card .overlay .overlayButton {
   width: 100%;
   font-weight: bold;
+  margin-left: 0;
+  margin-right: 0;
 }
 /*# sourceMappingURL=templates.css.map */
